@@ -1,0 +1,32 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+env:
+  LOG_LEVEL: debug
+
+jobs:
+  validate-config:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    strategy:
+      matrix:
+        file:
+          - default
+          - renovate-config
+    env:
+      RENOVATE_CONFIG_FILE: ${{ matrix.file }}.json
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: testing ${{ matrix.file }}
+        run: npx -p renovate -c renovate-config-validator
