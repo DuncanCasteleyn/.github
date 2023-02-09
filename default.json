@@ -6,9 +6,10 @@
       "schedule:nonOfficeHours",
       ":label(dependencies)",
       ":automergeMinor",
-      ":automergePr"
+      ":automergePr",
+      "docker:pinDigests",
+      "helpers:pinGitHubActionDigests"
     ],
     "automergeStrategy": "squash",
     "platformAutomerge": true
   }
-  
