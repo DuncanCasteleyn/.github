@@ -12,5 +12,8 @@
     "helpers:pinGitHubActionDigests",
     ":label(dependencies)"
   ],
-  "automergeStrategy": "squash"
+  "automergeStrategy": "squash",
+  "pinDigest": {
+    "automerge": true
+  }
 }
