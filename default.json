@@ -5,6 +5,7 @@
       ":timezone(Europe/Brussels)",
       "schedule:nonOfficeHours",
       ":label(dependencies)",
+      ":automergeDigest",
       ":automergeMinor",
       ":automergePr",
       "docker:pinDigests",
