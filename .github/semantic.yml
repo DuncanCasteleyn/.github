@@ -1,0 +1,5 @@
+# Default Semantic Commit bot configuration: https://github.com/Ezard/semantic-prs
+# Defining your own .github/semantic.yml file in your repository will override the default configuration.
+
+# Always validate the PR title, and ignore the commits
+titleOnly: true
