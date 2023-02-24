@@ -1,4 +1,4 @@
-name: test
+name: Renovate config validator
 
 on:
   push:
@@ -13,17 +13,9 @@ env:
 
 jobs:
   validate-config:
+    name: Validate Renovate config
     runs-on: ubuntu-latest
     timeout-minutes: 5
-
-    strategy:
-      matrix:
-        file:
-          - default
-          - renovate-config
-          - renovate
-    env:
-      RENOVATE_CONFIG_FILE: ${{ matrix.file }}.json
 
     steps:
       - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3
@@ -34,4 +26,10 @@ jobs:
           node-version: '18'
 
       - name: testing ${{ matrix.file }}
-        run: npx -p renovate -c renovate-config-validator
+        run: >-
+          npx -p renovate -c 
+          'renovate-config-validator
+          default.json
+          renovate-config.json
+          renovate.json
+          '
