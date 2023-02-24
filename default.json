@@ -17,5 +17,13 @@
   "pinDigest": {
     "recreateClosed": true,
     "automerge": true
-  }
+  },
+  "packageRules": [
+    {
+      "matchDepNames": [
+        "org.springframework.boot"
+      ],
+      "semanticCommitType": "fix"
+    }
+  ]
 }
