@@ -13,7 +13,12 @@
     "helpers:pinGitHubActionDigests",
     ":label(dependencies)"
   ],
+  "configMigration": true,
   "automergeStrategy": "squash",
+  "pin": {
+    "recreateClosed": true,
+    "automerge": true
+  },
   "pinDigest": {
     "recreateClosed": true,
     "automerge": true
