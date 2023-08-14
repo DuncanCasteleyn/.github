@@ -11,7 +11,9 @@
     ":automergePr",
     "docker:pinDigests",
     "helpers:pinGitHubActionDigests",
-    ":label(dependencies)"
+    ":label(dependencies)",
+    ":separateMultipleMajorReleases",
+    ":separatePatchReleases"
   ],
   "configMigration": true,
   "automergeStrategy": "squash",
