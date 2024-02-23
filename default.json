@@ -10,7 +10,7 @@
     ":automergeMinor",
     ":automergePr",
     "docker:pinDigests",
-    "helpers:pinGitHubActionDigests",
+    "helpers:pinGitHubActionDigestsToSemver",
     ":label(dependencies)",
     ":separateMultipleMajorReleases",
     ":separatePatchReleases"
@@ -35,14 +35,6 @@
         "org.jetbrains.kotlin.*"
       ],
       "semanticCommitType": "fix"
-    },
-    {
-      "description": "Pin GitHub Actions",
-      "depTypeList": [
-        "action"
-      ],
-      "extractVersion": "^(?<version>v\\d+\\.\\d+\\.\\d+)$",
-      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
     }
   ]
 }
