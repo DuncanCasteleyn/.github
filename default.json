@@ -7,7 +7,7 @@
     "schedule:nonOfficeHours",
     "schedule:automergeNonOfficeHours",
     ":automergeDigest",
-    ":automergeMinor",
+    ":automergePatch",
     ":automergePr",
     "docker:pinDigests",
     "helpers:pinGitHubActionDigestsToSemver",
